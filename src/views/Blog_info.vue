@@ -1,17 +1,19 @@
 <template>
   <div>
     <p>标题：</p>
-      {{currentBlog.title}}
+      {{$store.state.currentBlog.title}}
     <p>正文</p>
-      {{currentBlog.content}}
+      {{$store.state.currentBlog.content}}
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
+import store from '@/store'
 
 export default {
-  name: 'blog_info'
+  name: 'blog_info',
+  store
 }
 </script>
 

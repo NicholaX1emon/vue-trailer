@@ -5,13 +5,15 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    bloglist: []
+    bloglist: [],
+    currentBlog: null
   },
   mutations: {
     addBlog (state, newBlog) {
       state.bloglist.push(newBlog)
     },
-    setCurrentBlog (state, newCurrentBlog) {
+    setCurrnetBlog (state, newCurrentBlog) {
+      console.log(222)
       state.currentBlog = newCurrentBlog
     }
   },

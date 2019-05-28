@@ -1,9 +1,10 @@
 <template>
   <div>
-    <p>标题：</p>
-      <input type="text" v-model="title"/>
-    <p>正文</p>
-      <input type="text" v-model="content"/>
+    <p class="title">标题：<input type="text" v-model="title"/></p>
+    <div class="content">
+      <p>正文: </p>
+      <textarea rows="5" cols="30" v-model="content"/>  
+    </div>  
     <p><button @click="addClick">添加</button></p>
   </div>
 </template>
@@ -28,16 +29,28 @@ export default {
         title: this.title,
         content: this.content
       })
-      console.log('title --->', this.title)
       this.title = ''
       this.content= ''
       this.$router.push('/home/bloglist')
-      console.log('store --->', store.state)
     }
   }
 }
 </script>
 
 <style scoped>
-
+  .title {
+    width: 75%;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+  }
+  .content {
+    width: 75%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+  }
+  p button {
+    margin: 0 auto;
+  }
 </style>
