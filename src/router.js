@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import AddBlog from './views/Add_blog.vue'
 import Login from './views/Login.vue'
-import BlogInfo from './views/Blog_info.vue'
 
 Vue.use(Router)
 
@@ -38,11 +37,6 @@ export default new Router({
       path: '/addblog',
       name: 'add_blog',
       component: AddBlog
-    },
-    {
-      path: '/bloginfo',
-      name: 'blog_info',
-      component: BlogInfo
     }
   ]
 })
